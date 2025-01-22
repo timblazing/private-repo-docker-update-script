@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Configuration
-CONTAINER_NAME="your-container-name"
-DIRECTORY_NAME="your-directory-name"
+CONTAINER_NAME="container-name"
+DIRECTORY_NAME="directory-name"
 GITHUB_REPO="https://your-token@github.com/username/repository"
 
 # Exit on any error

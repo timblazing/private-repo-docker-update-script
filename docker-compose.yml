@@ -1,0 +1,19 @@
+services:
+  container-name:
+    container_name: container-name
+    build: .
+    ports:
+      - "3000:80"
+    volumes:
+      - /root/1TB/YOUTUBE:/usr/share/nginx/html/videos
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:80"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
